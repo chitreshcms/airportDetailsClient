@@ -21,7 +21,7 @@ export class FlightDetailsComponent implements OnInit {
     });
   }
 
-  deleteUser(airport: Airport): void {
+  deleteAirport(airport: Airport): void {
     this.airportService.deleteAirport(airport.airport_code)
       .subscribe( data => {
         this.airports = this.airports.filter(a => a !== airport);
@@ -34,7 +34,7 @@ export class FlightDetailsComponent implements OnInit {
     this.router.navigate(['edit-airport']);
   };
 
-  addUser(): void {
+  addAirport(): void {
     this.router.navigate(['add-airport']);
   };
 }
