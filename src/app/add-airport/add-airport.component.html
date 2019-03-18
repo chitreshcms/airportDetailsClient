@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Airport</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="airportName">Airport Name:</label>
+      <input formControlName="airport_name" placeholder="Airport Name" name="airportName" class="form-control" id="airportName">
+    </div>
+
+    <div class="form-group">
+      <label for="cityName">City Name:</label>
+      <input  formControlName="city_name" placeholder="City Name" name="cityName" class="form-control" id="cityName" >
+    </div>
+
+    <div class="form-group">
+      <label for="airportCode">Airport Code :</label>
+      <input type="number" formControlName="airport_code" placeholder="Airport Code" name="airportCode" class="form-control" id="airportCode" >
+    </div>
+
+    <div class="form-group">
+        <label for="countryCode">Country Code :</label>
+        <input type="number" formControlName="country_code" placeholder="Country Code" name="countryCode" class="form-control" id="countryCode">
+      </div>
+
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>

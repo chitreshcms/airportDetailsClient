@@ -1,0 +1,24 @@
+<div class="col-md-6">
+  <h2> AIRPORT Details</h2>
+  <button class="btn btn-danger" (click)="addAirport()"> Add Airport</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Airport Name</th>
+      <th>City Name</th>
+      <th>Airport Code</th>
+      <th>Country Code</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let airport of airports">
+      <td>{{airport.airport_name}}</td>
+      <td>{{airport.city_name}}</td>
+      <td>{{airport.airport_code}}</td>
+      <td>{{airport.country_code}}</td>
+      <td><button class="btn btn-danger" (click)="deleteAirport(airport)"> Delete</button>
+        <button class="btn btn-danger" (click)="editAirport(airport)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
